@@ -62,11 +62,36 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             bindings = <&kp>, <&kp>;
+
             global-quick-tap;
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <125>;
             flavor = "tap-preferred";
+        };
+
+        hm_s: homerow_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HM_S";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            hold-trigger-key-positions = <18 11>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            flavor = "tap-preferred";
+        };
+
+        hm_c: homerow_ctrl {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HM_C";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <12 17>;
         };
     };
 
@@ -92,10 +117,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-           &kp Q       &kp W             &kp E         &kp R           &kp T        &kp Y    &kp U            &kp I            &kp O        &kp P
-           &hm LGUI A  &hm LEFT_SHIFT S  &hm LCTRL D   &hm LEFT_ALT F  &kp G        &kp H    &hm RCTRL J      &hm LCTRL K      &hm RSHFT L  &hm RGUI SEMI
-&lt 4 ESC  &kp Z       &kp X             &kp C         &kp V           &kp B        &kp N    &kp M            &kp COMMA        &kp DOT      &kp FSLH       &kp SQT
-                                         &kp LEFT_GUI  &lt 1 TAB       &kp SPACE    &kp RET  &lt 2 BACKSPACE  &lt 3 RIGHT_ALT
+           &kp Q       &kp W               &kp E          &kp R           &kp T        &kp Y    &kp U            &kp I            &kp O          &kp P
+           &hm LGUI A  &hm_s LEFT_SHIFT S  &hm_c LCTRL D  &hm LEFT_ALT F  &kp G        &kp H    &hm RCTRL J      &hm_c LCTRL K    &hm_s RSHFT L  &hm RGUI SEMI
+&lt 4 ESC  &kp Z       &kp X               &kp C          &kp V           &kp B        &kp N    &kp M            &kp COMMA        &kp DOT        &kp FSLH       &kp SQT
+                                           &kp LEFT_GUI   &lt 1 TAB       &kp SPACE    &kp RET  &lt 2 BACKSPACE  &lt 3 RIGHT_ALT
             >;
         };
 
