@@ -55,6 +55,37 @@
             bindings = <&kp CAPSLOCK>;
             key-positions = <8 9 7>;
         };
+
+        win_lock {
+            bindings = <&kp LG(L)>;
+            key-positions = <20 31>;
+        };
+
+        win_tab {
+            bindings = <&kp LG(TAB)>;
+            key-positions = <16 17 18 16 17>;
+            layers = <0>;
+        };
+
+        nen_vwin {
+            bindings = <&kp LG(LC(D))>;
+            key-positions = <16 17 18 19>;
+        };
+
+        vwin_left {
+            bindings = <&kp LG(LC(LEFT))>;
+            key-positions = <16 17>;
+        };
+
+        vwin_right {
+            bindings = <&kp LG(RIGHT)>;
+            key-positions = <17 18>;
+        };
+
+        del_vwin {
+            bindings = <&kp LG(LC(F4))>;
+            key-positions = <27 28 29>;
+        };
     };
 
     behaviors {
